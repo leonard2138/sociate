@@ -1,0 +1,444 @@
+/* Стили для комментариев */
+.comments-section {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.comments-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.comments-header h3 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.comments-header i {
+    margin-right: 0.5rem;
+    color: var(--primary-color);
+}
+
+.comments-count {
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    padding: 0.2rem 0.5rem;
+    font-size: 0.8rem;
+    margin-left: 0.5rem;
+}
+
+.comment-form {
+    margin-bottom: 2rem;
+    background-color: var(--card-bg);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.comment-form textarea {
+    width: 100%;
+    min-height: 100px;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 0.25rem;
+    resize: vertical;
+    font-family: inherit;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    transition: border-color 0.3s;
+}
+
+.comment-form textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+.comment-form-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.comment-author {
+    display: flex;
+    align-items: center;
+}
+
+.comment-author i {
+    margin-right: 0.5rem;
+    color: var(--text-muted);
+}
+
+#set-name-btn {
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    cursor: pointer;
+    padding: 0;
+    font-size: 1rem;
+    text-decoration: underline;
+}
+
+#submit-comment {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+#submit-comment:hover {
+    background-color: var(--primary-dark);
+}
+
+#submit-comment:disabled {
+    background-color: var(--text-muted);
+    cursor: not-allowed;
+}
+
+#submit-comment i {
+    margin-right: 0.5rem;
+}
+
+.comment-time-left {
+    margin-top: 0.75rem;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+}
+
+.comment-time-left i {
+    margin-right: 0.5rem;
+}
+
+.comments-list {
+    margin-top: 1.5rem;
+}
+
+.comment {
+    background-color: var(--card-bg);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+}
+
+.comment-author-name {
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.comment-author-name i {
+    margin-right: 0.5rem;
+    color: var(--text-muted);
+}
+
+.comment-date {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+}
+
+.delete-comment-btn {
+    background: none;
+    border: none;
+    color: #e74c3c;
+    cursor: pointer;
+    margin-left: 0.5rem;
+    padding: 0.25rem;
+    border-radius: 0.25rem;
+    transition: background-color 0.2s;
+}
+
+.delete-comment-btn:hover {
+    background-color: rgba(231, 76, 60, 0.1);
+}
+
+.comment-content {
+    line-height: 1.5;
+    white-space: pre-line;
+}
+
+.no-comments {
+    text-align: center;
+    padding: 2rem;
+    color: var(--text-muted);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.no-comments i {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.loading {
+    text-align: center;
+    padding: 1rem;
+    color: var(--text-muted);
+}
+
+.loading i {
+    margin-right: 0.5rem;
+}
+
+/* Поисковая система */
+.search-container {
+    flex-grow: 1;
+    margin: 0 2rem;
+    max-width: 500px;
+}
+
+.search-box {
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.search-box:focus-within {
+    background-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-color: var(--primary-color);
+}
+
+#search-input {
+    flex-grow: 1;
+    background: transparent;
+    border: none;
+    padding: 0.75rem 1.25rem;
+    color: white;
+    font-size: 1rem;
+    outline: none;
+}
+
+#search-input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+#search-button {
+    background-color: var(--primary-color);
+    border: none;
+    color: white;
+    padding: 0.75rem 1.25rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#search-button:hover {
+    background-color: var(--primary-dark);
+}
+
+/* Модальное окно результатов поиска */
+.search-results-content {
+    max-width: 700px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+#search-query-display {
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 1.1rem;
+    color: var(--text-muted);
+}
+
+.search-result-item {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.search-result-item:last-child {
+    border-bottom: none;
+}
+
+.search-result-title {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.search-result-title a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.search-result-title a:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
+}
+
+.search-result-snippet {
+    margin-bottom: 0.75rem;
+    line-height: 1.5;
+}
+
+.search-result-date {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.search-highlight {
+    background-color: rgba(255, 193, 7, 0.3);
+    padding: 0.1rem 0.2rem;
+    border-radius: 3px;
+    font-weight: 500;
+}
+
+#no-results {
+    text-align: center;
+    padding: 2rem;
+    color: var(--text-muted);
+}
+
+#no-results i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    opacity: 0.7;
+}
+
+/* Адаптивность для поисковой строки */
+@media (max-width: 768px) {
+    .search-container {
+        margin: 0.5rem 0;
+        max-width: 100%;
+        order: 3;
+        width: 100%;
+    }
+    
+    .header-content {
+        flex-wrap: wrap;
+    }
+}
+
+/* Модальное окно для ввода имени */
+.name-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+.name-modal.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.name-modal .modal-content {
+    background-color: var(--card-bg);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.name-modal h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.name-modal .input-group {
+    margin-bottom: 1rem;
+}
+
+.name-modal label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.name-modal input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 0.25rem;
+    font-size: 1rem;
+}
+
+.name-modal input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+.name-modal .buttons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.name-modal button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.name-modal button:hover {
+    background-color: var(--primary-dark);
+}
+
+.name-modal .close-name-modal {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--text-muted);
+    cursor: pointer;
+    padding: 0;
+}
+
+.name-modal .error {
+    color: #e74c3c;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.name-modal .name-warning {
+    color: #e67e22;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    padding: 0.5rem;
+    background-color: rgba(230, 126, 34, 0.1);
+    border-left: 3px solid #e67e22;
+    border-radius: 0.25rem;
+} 
